@@ -4,7 +4,7 @@
   "description": "An electron app that gets hypixel player stats.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MixedTea/HypixelElectron/issues"
   },
-  "homepage": "https://github.com/MixedTea/HypixelElectron#readme"
+  "homepage": "https://github.com/MixedTea/HypixelElectron#readme",
+  "dependencies": {
+    "electron": "^1.8.4"
+  }
 }
