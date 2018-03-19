@@ -1,0 +1,19 @@
+{
+  "name": "hypixelelectron",
+  "version": "1.0.0",
+  "description": "An electron app that gets hypixel player stats.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MixedTea/HypixelElectron.git"
+  },
+  "author": "MixedTea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MixedTea/HypixelElectron/issues"
+  },
+  "homepage": "https://github.com/MixedTea/HypixelElectron#readme"
+}
