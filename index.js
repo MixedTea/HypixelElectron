@@ -6,6 +6,8 @@ var form = document.querySelector('form');
 form.addEventListener('submit', testThing);
 
 ////MAKING MY LIFE VERY SUICIDAL//////
+    //General//
+var player_stats = document.querySelector('#player_stats');
     //General Stats//
 var err =  document.querySelector('#err');
 var username = document.querySelector('#username');
@@ -25,12 +27,17 @@ var uhc_kdr = document.querySelector('#uhc_kdr');
 //////OKAY I DID IT WITHOUT KMSING MYSELF///////
 
 
+//Setup//
+player_stats.style.display = "none";
+
 function testThing(e) {
+    document.getElementById('test').style.display = "none";
     e.preventDefault();
     var error = false;
+    player_stats.style.display = "none";
     err.style.display = "none";
     var name = document.querySelector('#name').value;
-    document.getElementById('gay').innerHTML = name;
+    document.getElementById('Name').innerHTML = name;
     https.get('https://api.hypixel.net/player?key=' + API_KEY + '&name=' + name, res => {
         let body = '';
         res.on('data', data => {
@@ -41,17 +48,21 @@ function testThing(e) {
                 body = JSON.parse(body);
             }catch(e) {
                 console.log("Invalid Username");
-                err.style.display = "block";
-                err.innerHTML = 'Invalid Username!';
+                //err.style.display = "block";
+                //err.innerHTML = 'Invalid Username!';
                 error = true;
             }
             if(body.player == null){
                 error = true;
                 console.log("Invalid Username");
-                err.style.display = "block";
-                err.innerHTML = 'Invalid Username!';
+                //err.style.display = "block";
+               //err.innerHTML = 'Invalid Username!';
+               document.getElementById('Name').innerHTML = "Invalid Username!";
+               document.getElementById("test").style.display = "block";
             }
             if(!error){
+                document.getElementById("test").style.display = "block";
+                player_stats.style.display = "block";
                 err.style.display = "none";
                 //General Stats//
                 username.innerHTML = "Username: " + body.player.playername;
@@ -69,7 +80,7 @@ function testThing(e) {
                 uhc_deaths.innerHTML = "UHC Deaths: " + body.player.stats.UHC.deaths;
                 uhc_kdr.innerHTML = "UHC Kill/ Death ratio: " + (body.player.stats.UHC.kills / body.player.stats.UHC.deaths).toFixed(2);
             }
-            
+            document.getElementById('name').blur();
         });
     });
 }
