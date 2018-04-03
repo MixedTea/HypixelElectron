@@ -2,27 +2,48 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Electron Hypixel</title>
+    <title>Hypixel Electron</title>
 </head>
 
 <body>
-    <nav class="#2e7d32 green darken-3">
-        <div class="nav-wrapper">
-            <form>
-                <div class="input-field">
-                    <input type="search" id="search" required placeholder="Search for a player and get their stats!">
-                    <label for="search" class="label-icon">
-                        <i class="material-icons">search</i>
-                    </label>
-                    <i class="material-icons">close</i>
-                </div>
-            </form>
+    <form action="">
+        <div>
+            <label for="">Username</label>
+            <input type="text" id="name">
         </div>
-    </nav>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
-    <script src='./index.js'></script>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="test">
+        <h1 id="gay">Lets see if this works</h1>
+    </div>
+    <div class="player_stats">
+        <div id="err"></div>
+        <div id="general_stats">
+            <ul id="general_list">
+                <li id="username"></li>
+                <li id="rank"></li>
+            </ul>
+        </div>
+        <div id="skywars_stats">
+            <ul id="skywars_list">
+                <li id="sw_wins"></li>
+                <li id="sw_kills"></li>
+                <li id="sw_losses"></li>
+                <li id="sw_deaths"></li>
+                <li id="sw_kdr"></li>
+                <li id="sw_wl"></li>
+            </ul>
+        </div>
+        <div id="uhc_stats">
+            <ul id="uhc_list">
+                <li id="uhc_wins"></li>
+                <li id="uhc_kills"></li>
+                <li id="uhc_deaths"></li>
+                <li id="uhc_kdr"></li>
+            </ul>
+        </div>
+    </div>
 </body>
+<script src="./index.js"></script>
 
 </html>
