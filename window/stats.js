@@ -2,6 +2,8 @@ const https = require("https");
 var config = require('./config');
 var API_KEY = config.API_KEY;
 
+M.AutoInit();
+
 var form = document.querySelector('form');
 form.addEventListener('submit', testThing);
 
@@ -10,7 +12,6 @@ form.addEventListener('submit', testThing);
 var player_stats = document.querySelector('#player_stats');
     //General Stats//
 var err =  document.querySelector('#err');
-var username = document.querySelector('#username');
 var rank = document.querySelector('#rank');
     //Skywars Stats//
 var sw_wins = document.querySelector('#sw_wins');
@@ -65,7 +66,6 @@ function testThing(e) {
                 player_stats.style.display = "block";
                 err.style.display = "none";
                 //General Stats//
-                username.innerHTML = "Username: " + body.player.playername;
                 rank.innerHTML = "Rank: " + body.player.newPackageRank;
                 //Skywars//
                 sw_wins.innerHTML = "Skywars Wins: " + body.player.stats.SkyWars.wins;
