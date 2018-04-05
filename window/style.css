@@ -1,0 +1,7 @@
+nav{
+    -webkit-app-region: drag;
+}
+
+#nav-mobile, .nav-content{
+    -webkit-app-region: no-drag;
+}

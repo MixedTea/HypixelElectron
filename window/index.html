@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
     <title>Hypixel Electron</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <nav class="nav-extended">
+    <nav class="nav-extended green darken-4">
         <div class="nav-wrapper">
             <a href="#" class="brand-logo">Hypixel</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
-                    <a href="#">Minimize</a>
+                    <a href="#" id="minimize"><i class="fas fa-window-minimize" style="font-size:2em;"></i></a>
                 </li>
                 <li>
-                    <a href="#">Maximize</a>
+                    <a href="#" id="maximize"><i class="fas fa-window-maximize" style="font-size:2em;"></i></a>
                 </li>
                 <li>
-                    <a href="#">Close</a>
+                    <a href="#" id="close"><i class="fas fa-window-close" style="font-size:2em;"></i></a>
                 </li>
             </ul>
         </div>
@@ -44,7 +46,6 @@
                         <label for="name">Username</label>
                     </div>
                 </div>
-
             </form>
             <div id="test">
                 <h4 id="Name">Type in a player's username!</h4>
@@ -84,7 +85,8 @@
         Leaderboards
     </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>..
+<script src="./index.js"></script>
 <script src="./stats.js"></script>
 <script src="./graphs.js"></script>
 <script src="./leaderboards.js"></script>

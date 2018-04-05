@@ -1,8 +1,3 @@
-const https = require("https");
-var config = require('./config');
-var API_KEY = config.API_KEY;
-
-M.AutoInit();
 
 var form = document.querySelector('form');
 form.addEventListener('submit', testThing);
