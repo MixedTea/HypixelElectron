@@ -8,6 +8,7 @@ const path = require("path");
 const url = require("url");
 
 let win;
+let apiWin;
 
 function createWindow() {
     win = new BrowserWindow({
@@ -29,26 +30,45 @@ function createWindow() {
     win.focus();
     //Menu.setApplicationMenu(null);
 }
+
+function createApiWindow(){
+    apiWin = new BrowserWindow({
+        width: 300,
+        height: 200
+    });
+    apiWin.loadURL(url.format({
+        pathname: path.join(__dirname, 'window/apiWin/apiWin.html'),
+        protocol: 'file:',
+        slashes: true
+    }));
+    apiWin.on('closed', ()=>{
+        apiWin = null;
+    });
+    apiWin.focus();
+    apiWin.center();
+}
 app.on('ready', createWindow);
 app.on('activate', () => {
     if (win === null) {
         createWindow();
     }
 });
-
-ipcMain.on('close', (event, arg)=>{
+ipcMain.on('close', (e, arg) => {
     console.log('closing');
     win.close();
 });
-ipcMain.on('maximize', (event, args) => {
+ipcMain.on('maximize', (e, args) => {
     console.log("maximizing");
     win.maximize();
 });
-ipcMain.on('unmaximize', (event, args) => {
+ipcMain.on('unmaximize', (e, args) => {
     console.log("unmaximizing");
     win.unmaximize();
 });
-ipcMain.on('minimize', (event, args) => {
+ipcMain.on('minimize', (e, args) => {
     console.log("maximizing");
     win.minimize();
+});
+ipcMain.on('apiKeyRequest', (e, args) => {
+    createApiWindow();
 });

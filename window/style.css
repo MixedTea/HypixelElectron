@@ -5,3 +5,6 @@ nav{
 #nav-mobile, .nav-content{
     -webkit-app-region: no-drag;
 }
+#logothing{
+    margin-left:20px;
+}
