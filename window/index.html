@@ -38,13 +38,13 @@
                     <li class="tab">
                         <a href="#stats">Stats</a>
                     </li>
-                    <li class="tab">
+                    <li class="tab disabled">
                         <a href="#leaderboards">Leaderboards</a>
                     </li>
-                    <li class="tab">
+                    <li class="tab disabled">
                         <a href="#guilds">Guilds</a>
                     </li>
-                    <li class="tab">
+                    <li class="tab disabled">
                         <a href="#compare">Compare</a>
                     </li>
                     <li class="tab">
@@ -123,7 +123,28 @@
             </div>
         </div>
         <div id="leaderboards">
-            Leaderboards
+            <div class="container">
+                <h4>Games</h4>
+                <div class="row">
+                    <div class="col s4">
+                        <button class="waves-effect waves-dark green darken-4 btn" id="skywarsBTN">Skywars</button>
+                    </div>
+                    <div class="col s4">
+                            <button class="waves-effect waves-dark green darken-4 btn" id="bwBTN">Bedwars</button>
+                    </div>
+                    <div class="col s4">
+                            <button class="waves-effect waves-dark green darken-4 btn" id="uhcBTN">UHC</button>
+                    </div>
+                </div>
+                <div class="row" id="game_modes">
+                        <button class="waves-effect waves-dark green darken-4 btn" id="game_mode1"></button>
+                        <button class="waves-effect waves-dark green darken-4 btn" id="game_mode2"></button>
+                        <button class="waves-effect waves-dark green darken-4 btn" id="game_mode3"></button>
+                        <button class="waves-effect waves-dark green darken-4 btn" id="game_mode4"></button>
+                        <button class="waves-effect waves-dark green darken-4 btn" id="game_mode5"></button>
+                        <button class="waves-effect waves-dark green darken-4 btn" id="game_mode6"></button>
+                </div>
+            </div>
         </div>
         <div id="guilds">
             Guilds
@@ -132,7 +153,6 @@
             Compare
         </div>
         <div id="graphs">
-            Graphs
         </div>
         <div class="fixed-action-btn" id='fab'>
             <a class="btn-floating btn-large green darken-4 waves-effect">
@@ -141,7 +161,7 @@
         </div>
     </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>..
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script src="./index.js"></script>
 <script src="./stats.js"></script>
 <script src="./graphs.js"></script>

@@ -1,5 +1,4 @@
 const https = require("https");
-var config = require('./config');
 const fs = require('fs');
 var {
     ipcRenderer,
